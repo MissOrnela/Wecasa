@@ -6,3 +6,11 @@ This app is built using the Vite boilerplate with React and TypeScript. For styl
 
 For this technical test, I chose a lightweight structure (app / api / hooks / pages / components / types /utils) instead of a classic clean architecture setup.
 cause it reduces boilerplate,it is suitable for a small scope project like this one while keeping concerns well separated.
+
+## State management
+
+I chose Redux Toolkit over React Context to manage global state, as the state is frequently updated and shared across multiple pages, even though the application scope is relatively small.
+
+## Data fetch tool
+
+For fecthing data i use tanstack query over classic fecth cause it already integrates automatic caching , background refetching (set to 30 min ) and it simplifies loading/error handling.
