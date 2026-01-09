@@ -15,3 +15,8 @@ export function RequireAddress({ children }: { children: JSX.Element }) {
   const { address } = useSelector((state: RootState) => state.booking);
   return address ? children : <Navigate to={ROUTES.address} replace />;
 }
+
+export function RequireAppointment({ children }: { children: JSX.Element }) {
+  const { appointment } = useSelector((state: RootState) => state.booking);
+  return appointment ? children : <Navigate to={ROUTES.appointment} replace />;
+}
