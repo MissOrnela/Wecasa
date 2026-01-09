@@ -1,4 +1,32 @@
-# React + TypeScript + Vite + Tailwind css
+# Getting Started
+
+## 1- Clone repository
+
+You should first clone repository et jump into the cloned folder
+
+```bash
+git clone https://github.com/MissOrnela/TimeLeft-Back-Office-.git
+cd TimeLeft-Back-Office-
+
+```
+
+## 2- Install Dependencies
+
+```bash
+npm install
+```
+
+## 3- Run server in development mode
+
+```bash
+npm run dev
+```
+
+## 4- Visualize
+
+Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
+
+## React + TypeScript + Vite + Tailwind css
 
 This app is built using the Vite boilerplate with React and TypeScript. For styling it use Tailwind css cause itis a simple way to style the application quickly and consistently without spending time on custom CSS or design details . It also includes ESLint for code linting.
 
