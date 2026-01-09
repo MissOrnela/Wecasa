@@ -26,6 +26,12 @@ npm run dev
 
 Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
 
+## 5- Run server test
+
+```bash
+npm run test
+```
+
 ## React + TypeScript + Vite + Tailwind css
 
 This app is built using the Vite boilerplate with React and TypeScript. For styling it use Tailwind css cause itis a simple way to style the application quickly and consistently without spending time on custom CSS or design details . It also includes ESLint for code linting.
