@@ -14,3 +14,8 @@ export interface Category {
 export type UniverseResponse = {
   categories: Category[];
 };
+export type CreateBookingPayload = {
+  prestations: string[];
+  appointment: string;
+  address: string;
+};
