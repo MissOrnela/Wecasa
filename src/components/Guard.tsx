@@ -11,3 +11,7 @@ export function RequireBasket({ children }: { children: JSX.Element }) {
     <Navigate to={ROUTES.prestations} replace />
   );
 }
+export function RequireAddress({ children }: { children: JSX.Element }) {
+  const { address } = useSelector((state: RootState) => state.booking);
+  return address ? children : <Navigate to={ROUTES.address} replace />;
+}

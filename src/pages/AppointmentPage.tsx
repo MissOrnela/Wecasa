@@ -7,6 +7,7 @@ import NextButton from "@/components/NextButton";
 import { isValidDate } from "@/shared/utils";
 import { AppointmentInput } from "@/components/AppointmentInput";
 import { ROUTES } from "@/app/routes";
+import { RequireAddress, RequireBasket } from "@/components/Guard";
 
 export const AppointmentPage = () => {
   const navigate = useNavigate();
@@ -19,26 +20,31 @@ export const AppointmentPage = () => {
 
   const handleConfirm = async () => {
     dispatch(setAppointment(localAppointment));
+
     navigate(ROUTES.confirmation);
   };
 
   return (
-    <div className="mx-auto space-y-4 p-4">
-      <h1 className="text-xl  ml-2 font-bold mb-4">
-        Veuillez choisir l'heure du Rendez-vous
-      </h1>
-      <AppointmentInput
-        value={localAppointment}
-        min={minDateTime}
-        onChange={setLocalAppointment}
-      />
+    <RequireBasket>
+      <RequireAddress>
+        <div className="mx-auto space-y-4 p-4">
+          <h1 className="text-xl  ml-2 font-bold mb-4">
+            Veuillez choisir l'heure du Rendez-vous
+          </h1>
+          <AppointmentInput
+            value={localAppointment}
+            min={minDateTime}
+            onChange={setLocalAppointment}
+          />
 
-      <NextButton
-        disabled={!isValidDate(localAppointment)}
-        label="Confirmer"
-        onClick={() => handleConfirm()}
-      />
-      <Basket />
-    </div>
+          <NextButton
+            disabled={!isValidDate(localAppointment)}
+            label="Confirmer"
+            onClick={() => handleConfirm()}
+          />
+          <Basket />
+        </div>
+      </RequireAddress>
+    </RequireBasket>
   );
 };
