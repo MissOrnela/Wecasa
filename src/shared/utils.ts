@@ -10,3 +10,11 @@ export function formatDuration(minutes: number): string {
   if (m === 0) return `${h}h`;
   return `${h}h${String(m).padStart(2, "0")}`;
 }
+
+export function isValidDate(value: string): boolean {
+  const result =
+    new Date(value) > new Date() &&
+    new Date(value).getHours() >= 7 &&
+    new Date(value).getHours() <= 22;
+  return result;
+}
