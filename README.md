@@ -5,8 +5,8 @@
 You should first clone repository et jump into the cloned folder
 
 ```bash
-git clone https://github.com/MissOrnela/TimeLeft-Back-Office-.git
-cd TimeLeft-Back-Office-
+git clone https://github.com/MissOrnela/Wecasa.git
+cd Wecasa
 
 ```
 
